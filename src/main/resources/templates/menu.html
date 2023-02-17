@@ -7,9 +7,57 @@
 </head>
 <body>
 <h1>My Super Fancy Spa</h1>
+
 <div id = "clientProfile">
+    <h2>Your Profile</h2>
+
+    <p>Client Name: <span th:text="${name}">Fart</span></p>
+
+    <p>Skin Type: <span th:text="${skintype}">Skin Type</span></p>
+    <p>Mani or Pedi: <span th:text="${manipedi}">Mani / Pedi</span></p>
+
 </div>
+
+
 <div id = "servicesMenu">
+
+    <h2>Menu of Available Services</h2>
+    <br>
+    <h3>Facial Treatments</h3>
+    <br>
+
+    <table>
+        <thead>
+<!--        <tr>-->
+<!--            <th></th>-->
+<!--        </tr>-->
+            <p>The facial treatments below are recommended by our estheticians for your skin type. </p>
+        </thead>
+        <tr th:each="facial : ${appropriateFacials}">
+                <td th:text="${facial}"></td>
+        </tr>
+    </table>
+
+    <div th:if = '${manipedi == "pedicure" || manipedi == "both"}'>
+        <h3>Pedicure</h3>
+        <p th:replace = "fragments :: pedicureDescription"></p>
+    </div>
+    <div th:if = '${manipedi == "manicure" || manipedi == "both"}'>
+        <h3>Manicure</h3>
+        <p th:replace = "fragments :: manicureDescription"></p>
+    </div>
+
+    <h3>Recommended Colors</h3>
+    <div class="color-container">
+        <div class="color1"></div>
+        <div class="color2"></div>
+        <div class="color3"></div>
+        <div class="color4"></div>
+        <div class="color5"></div>
+        <div class="color6"></div>
+    </div>
+
+
 </div>
 </body>
 </html>
