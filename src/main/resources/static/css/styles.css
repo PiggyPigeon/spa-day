@@ -2,12 +2,6 @@ body {
     background-color: pink;
 }
 
-/*#clientProfile {*/
-/*    font-family: "Brush Script MT";*/
-/*    font-size: larger;*/
-
-/*}*/
-
 div {
     margin: auto;
     width: 50%;
@@ -29,53 +23,4 @@ table {
     width: 50%;
     padding: 10px;
     text-align: center;
-}
-
-.color-container{
-    display: flex;
-}
-.color1 {
-    height: 30px;
-    width: 30px;
-    background-color: cadetblue;
-    padding: 10px;
-    border-radius: 7px;
-}
-.color2 {
-    height: 30px;
-    width: 30px;
-    background-color: #638167;
-    padding: 10px;
-    border-radius: 7px;
-}
-
-.color3 {
-    height: 30px;
-    width: 30px;
-    background-color: #d78a5c;
-    padding: 10px;
-    border-radius: 7px;
-}
-.color4 {
-    height: 30px;
-    width: 30px;
-    background-color: #c7a224;
-    padding: 10px;
-    border-radius: 7px;
-}
-
-.color5 {
-    height: 30px;
-    width: 30px;
-    background-color: #a272a1;
-    padding: 10px;
-    border-radius: 7px;
-}
-
-.color6 {
-    height: 30px;
-    width: 30px;
-    background-color: #9fde8c;
-    padding: 10px;
-    border-radius: 7px;
 }
