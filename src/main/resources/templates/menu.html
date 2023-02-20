@@ -28,13 +28,13 @@
 
     <table>
         <thead>
-<!--        <tr>-->
-<!--            <th></th>-->
-<!--        </tr>-->
-            <p>The facial treatments below are recommended by our estheticians for your skin type. </p>
+        <!--        <tr>-->
+        <!--            <th></th>-->
+        <!--        </tr>-->
+        <p>The facial treatments below are recommended by our estheticians for your skin type. </p>
         </thead>
         <tr th:each="facial : ${appropriateFacials}">
-                <td th:text="${facial}"></td>
+            <td th:text="${facial}"></td>
         </tr>
     </table>
 
