@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
+    <title>Welcome</title>
+</head>
+<body>
+
+
+    <p th:text = "'Welcome ' + ${username} + '.'"></p>
+
+<!--    I really dont know if this is correct? I think this goes to root path but -->
+<!--    not to serviceSelection...-->
+    <a th:href="@{/}">
+        Spa Services
+    </a>
+
+</body>
+</html>
