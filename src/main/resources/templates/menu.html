@@ -9,9 +9,8 @@
 <h1>My Super Fancy Spa</h1>
 <div id = "clientProfile">
     <h2>My Profile</h2>
-
-    <p th:text = "'Skin Type: ' + ${client.skinType}"></p>
-    <p th:text = "'Nail Service: ' + ${client.nailService}"></p>
+    <p th:text = "${client.skinType}"></p>
+    <p th:text = "${client.nailService}"></p>
 </div>
 <div id = "servicesMenu">
     <h2>Menu of Available Services</h2>
