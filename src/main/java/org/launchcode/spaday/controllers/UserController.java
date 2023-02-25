@@ -18,24 +18,37 @@ public class UserController {
         return "user/add";
     }
 
-    @PostMapping
+    //below is Carrie's solution..
+    @PostMapping("/add")
     public String processAddUserForm(Model model, @ModelAttribute @Valid User user,
-                                     Errors errors,
-                                     String verify) {
-        model.addAttribute("user", user);
-//below give the password verification error message if ANY error is thrown....
-        if (errors.hasErrors() || !user.getPassword().equals(verify)) {
-            model.addAttribute("title", "Add User");
-            model.addAttribute("error", "Passwords do not match");
-            return "user/add";
-        }
-        if (user.getPassword().equals(verify) && !errors.hasErrors()) {
+                                     Errors errors) {
+
+        if (!errors.hasErrors()) {
             return "user/index";
         }
-        return "user/add";
+        else {
+            return "user/add";
+        }
     }
 }
 
+
+//    @PostMapping
+//    public String processAddUserForm(Model model, @ModelAttribute @Valid User user,
+//                                     Errors errors,
+//                                     String verify) {
+//        model.addAttribute("user", user);
+////below gives the password verification error message if ANY error is thrown....
+//        if (errors.hasErrors() || !user.getPassword().equals(verify)) {
+//            model.addAttribute("title", "Add User");
+//            model.addAttribute("error", "Passwords do not match");
+//            return "user/add";
+//        }
+//        if (user.getPassword().equals(verify) && !errors.hasErrors()) {
+//            return "user/index";
+//        }
+//        return "user/add";
+//    }
 
 
 
